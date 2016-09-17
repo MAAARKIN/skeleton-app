@@ -12,9 +12,9 @@ This project is an Spring Boot multimodule application with the following struct
 │           ├── java
 │           │   └── br
 │           │       └── com
-│           │       	└── skeleton
-│           │           	├── SkeletonApplication.java
-│           │           	├── HelloService.java
+│           │           └── skeleton
+│           │               ├── SkeletonApplication.java
+│           │               ├── HelloService.java
 │           └── resources
 │               ├── application.properties
 │               └── templates
@@ -26,7 +26,7 @@ This project is an Spring Boot multimodule application with the following struct
 │       └── main
 │           └── java
 │               └── br
-│               	└── com
+│                   └── com
 │                       └── skeleton
 │                           └── User.java
 ├── skeleton-repository
@@ -35,7 +35,7 @@ This project is an Spring Boot multimodule application with the following struct
 │       └── main
 │           └── java
 │               └── br
-│               	└── com
+│                   └── com
 │                       └── skeleton
 │                           └── UserRepository.java
 └── skeleton-business
