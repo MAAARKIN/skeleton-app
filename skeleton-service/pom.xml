@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.skeleton</groupId>
+		<artifactId>skeleton-app</artifactId>
+		<version>1.0.0</version>
+		<relativePath></relativePath>
+	</parent>
+	<artifactId>skeleton-service</artifactId>
+	
+	<properties>
+		<skeleton-model.version>1.0.0</skeleton-model.version>
+		<!-- <sc-business.version>1.0.0</sc-business.version> -->
+	</properties>
+	
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- Model project -->
+		<dependency>
+			<groupId>br.com.skeleton</groupId>
+			<artifactId>skeleton-model</artifactId>
+			<version>${skeleton-model.version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<!-- Business project -->
+		<!-- <dependency>
+			<groupId>br.com.skeleton</groupId>
+			<artifactId>skeleton-business</artifactId>
+			<version>${skeleton-business.version}</version>
+			<type>jar</type>
+		</dependency> -->
+	</dependencies>
+</project>
