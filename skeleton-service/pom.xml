@@ -5,22 +5,21 @@
 		<groupId>br.com.skeleton</groupId>
 		<artifactId>skeleton-app</artifactId>
 		<version>1.0.0</version>
-		<relativePath></relativePath>
 	</parent>
 	<artifactId>skeleton-service</artifactId>
-	
+
 	<properties>
 		<skeleton-model.version>1.0.0</skeleton-model.version>
 		<!-- <sc-business.version>1.0.0</sc-business.version> -->
 	</properties>
-	
+
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<!-- Model project -->
 		<dependency>
 			<groupId>br.com.skeleton</groupId>
@@ -30,11 +29,17 @@
 		</dependency>
 
 		<!-- Business project -->
-		<!-- <dependency>
-			<groupId>br.com.skeleton</groupId>
-			<artifactId>skeleton-business</artifactId>
-			<version>${skeleton-business.version}</version>
-			<type>jar</type>
-		</dependency> -->
+		<!-- <dependency> <groupId>br.com.skeleton</groupId> <artifactId>skeleton-business</artifactId> 
+			<version>${skeleton-business.version}</version> <type>jar</type> </dependency> -->
 	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Spring Boot plugins -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
