@@ -1,7 +1,10 @@
 package br.com.skeleton;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,19 +17,19 @@ public class HelloService {
 	private UserManager userManager;
 
 	@RequestMapping("/{name}")
-	public String hello(@PathVariable String name) {
+	public ResponseEntity<?> hello(@PathVariable String name) {
 		System.out.println("GET Invoked!");
 		User user = new User();
 		user.setName(name);
-		return "Hello: " + user.getName();
+		return new ResponseEntity<>("Hello: " + user.getName(), HttpStatus.OK);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public void post() {
+	public void post(@RequestBody User user) {
 		// TODO: Implementation for HTTP POST request
-		//falta receber o usuario no post.
-//		userManager.salvar(usuario); //redireciona para o business
 		System.out.println("POST invoked");
+		System.out.println(user.getName());
+		userManager.salvar(user); //redireciona para o business
 	}
 
 	@RequestMapping(method = RequestMethod.PUT)
