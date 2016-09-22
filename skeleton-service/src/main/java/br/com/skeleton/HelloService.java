@@ -1,5 +1,6 @@
 package br.com.skeleton;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/hello")
 public class HelloService {
+	
+	@Autowired
+	private UserManager userManager;
 
 	@RequestMapping("/{name}")
 	public String hello(@PathVariable String name) {
@@ -20,6 +24,8 @@ public class HelloService {
 	@RequestMapping(method = RequestMethod.POST)
 	public void post() {
 		// TODO: Implementation for HTTP POST request
+		//falta receber o usuario no post.
+//		userManager.salvar(usuario); //redireciona para o business
 		System.out.println("POST invoked");
 	}
 

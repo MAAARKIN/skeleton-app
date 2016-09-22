@@ -10,7 +10,7 @@
 
 	<properties>
 		<skeleton-model.version>1.0.0</skeleton-model.version>
-		<!-- <sc-business.version>1.0.0</sc-business.version> -->
+		<skeleton-business.version>1.0.0</skeleton-business.version>
 	</properties>
 
 
@@ -29,8 +29,12 @@
 		</dependency>
 
 		<!-- Business project -->
-		<!-- <dependency> <groupId>br.com.skeleton</groupId> <artifactId>skeleton-business</artifactId> 
-			<version>${skeleton-business.version}</version> <type>jar</type> </dependency> -->
+		<dependency>
+			<groupId>br.com.skeleton</groupId>
+			<artifactId>skeleton-business</artifactId>
+			<version>${skeleton-business.version}</version>
+			<type>jar</type>
+		</dependency>
 	</dependencies>
 
 	<build>

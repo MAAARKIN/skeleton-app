@@ -6,4 +6,34 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>skeleton-business</artifactId>
+  
+  <properties>
+		<skeleton-model.version>1.0.0</skeleton-model.version>
+		<sc-repository.version>1.0.0</sc-repository.version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Model project -->
+		<dependency>
+			<groupId>br.com.skeleton</groupId>
+			<artifactId>skeleton-model</artifactId>
+			<version>${skeleton-model.version}</version>
+			<type>jar</type>
+		</dependency>
+		
+		<!-- Repository project -->
+		<dependency>
+			<groupId>br.com.skeleton</groupId>
+			<artifactId>skeleton-repository</artifactId>
+			<version>${sc-repository.version}</version>
+			<type>jar</type>
+		</dependency>
+
+	</dependencies>
 </project>
