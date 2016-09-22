@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloService {
 	
-	@Autowired
-	private UserManager userManager;
+	@Autowired private UserManager userManager;
+	@Autowired private UserRepository usuarios;
 
 	@RequestMapping("/{name}")
 	public ResponseEntity<?> hello(@PathVariable String name) {
 		System.out.println("GET Invoked!");
 		User user = new User();
 		user.setName(name);
+		System.out.println(usuarios.count());
 		return new ResponseEntity<>("Hello: " + user.getName(), HttpStatus.OK);
 	}
 
@@ -30,6 +31,7 @@ public class HelloService {
 		System.out.println("POST invoked");
 		System.out.println(user.getName());
 		userManager.salvar(user); //redireciona para o business
+		System.out.println(usuarios.count());
 	}
 
 	@RequestMapping(method = RequestMethod.PUT)

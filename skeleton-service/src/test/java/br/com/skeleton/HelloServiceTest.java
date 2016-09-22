@@ -25,4 +25,16 @@ public class HelloServiceTest {
 		System.out.println(entity.getBody());
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 	}
+	
+	@Test
+	public void addUsuario() {
+		User newUser = new User();
+		newUser.setName("markin rest");
+		ResponseEntity<?> entity = this.restTemplate.postForEntity("/hello", newUser, User.class);
+		System.out.println("--------- response body");
+		System.out.println(entity.getBody());
+		System.out.println("--------- response status code");
+		System.out.println(entity.getStatusCode());
+		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
+	}
 }
